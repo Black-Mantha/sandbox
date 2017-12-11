@@ -37,6 +37,7 @@ public class Sandbox extends Thread {
 
 	@Override
 	public void run() {
+		if (Thread.currentThread() != this)  throw new IllegalStateException("Do not call .run() directly; start the thread with .start()");
 		if (hasStarted)  throw new SecurityException("Did you really just call Thread.getCurrentThread().run()?");
 		hasStarted = true;
 		if (connector==null)  throw new NullPointerException("No connector");
