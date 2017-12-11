@@ -6,7 +6,7 @@ import nl.blackmantha.sandbox.pub.IApplet;
 
 /**
  * 
- * Interface AppletThread, so that the Thread object can call functions that pub.IAppletConnector can't. 
+ * Extends ISandboxConnector, so that the Sandbox class can call functions that can't be called from inside the sandbox.
  * 
  * @author github.com/Black-Mantha
  *
